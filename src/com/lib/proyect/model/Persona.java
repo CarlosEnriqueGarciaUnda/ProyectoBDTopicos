@@ -1,18 +1,33 @@
 package com.lib.proyect.model;
 
 public class Persona {
+    private Integer idPersona;
     private String nombre;
-    private String appellidoPaterno;
+    private String apellidoPaterno;
     private String apellidoMaterno;
-    private int idPersona;
-    private int CURP;
+    private String CURP;
 
-    public Persona(String nombre, String appellidoPaterno, String apellidoMaterno, int idPersona, int CURP) {
+    public Persona(String nombre, String apellidoPaterno, String apellidoMaterno, String CURP) {
         this.nombre = nombre;
-        this.appellidoPaterno = appellidoPaterno;
+        this.apellidoPaterno = apellidoPaterno;
         this.apellidoMaterno = apellidoMaterno;
-        this.idPersona = idPersona;
         this.CURP = CURP;
+    }
+
+    public Persona(Integer idPersona, String nombre, String apellidoPaterno, String apellidoMaterno, String CURP) {
+        this.idPersona = idPersona;
+        this.nombre = nombre;
+        this.apellidoPaterno = apellidoPaterno;
+        this.apellidoMaterno = apellidoMaterno;
+        this.CURP = CURP;
+    }
+
+    public Integer getIdPersona() {
+        return idPersona;
+    }
+
+    public void setIdPersona(Integer idPersona) {
+        this.idPersona = idPersona;
     }
 
     public String getNombre() {
@@ -23,12 +38,12 @@ public class Persona {
         this.nombre = nombre;
     }
 
-    public String getAppellidoPaterno() {
-        return appellidoPaterno;
+    public String getApellidoPaterno() {
+        return apellidoPaterno;
     }
 
-    public void setAppellidoPaterno(String appellidoPaterno) {
-        this.appellidoPaterno = appellidoPaterno;
+    public void setApellidoPaterno(String apellidoPaterno) {
+        this.apellidoPaterno = apellidoPaterno;
     }
 
     public String getApellidoMaterno() {
@@ -39,19 +54,11 @@ public class Persona {
         this.apellidoMaterno = apellidoMaterno;
     }
 
-    public int getIdPersona() {
-        return idPersona;
-    }
-
-    public void setIdPersona(int idPersona) {
-        this.idPersona = idPersona;
-    }
-
-    public int getCURP() {
+    public String getCURP() {
         return CURP;
     }
 
-    public void setCURP(int CURP) {
+    public void setCURP(String CURP) {
         this.CURP = CURP;
     }
 }
